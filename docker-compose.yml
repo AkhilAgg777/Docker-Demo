@@ -1,0 +1,17 @@
+version:'3.9'
+
+services:
+  react-app:
+    build: ./react-app
+    volumes:
+     - ./react-app/src/app
+     ports:
+      -9000:3000
+
+
+  react-app:
+    build: ./node-backend
+    volumes:
+     - ./node-backend/src
+     ports:
+      -9000:5000    
